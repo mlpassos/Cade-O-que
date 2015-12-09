@@ -1,0 +1,85 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+#maps {
+	margin-top:5px;
+	width:100%;
+	height:calc(100vh - 105px);
+}
+.overlay {
+  display:block;
+  text-align:center;
+  color:#fff;
+  font-size:60px;
+  line-height:80px;
+  opacity:0.8;
+  background:#4477aa;
+  border:solid 3px #336699;
+  border-radius:4px;
+  box-shadow:2px 2px 10px #333;
+  text-shadow:1px 1px 1px #666;
+  padding:0 4px;
+}
+
+.modal {
+  height:500px;
+}
+
+.modal-content {
+  background-color:white;
+}
+
+.tipos {
+  list-style: none;
+  display:inline-block;
+  margin-top: 20px;
+  margin-left: -40px;
+}
+.tipos-item {
+  list-style: none;
+  display:inline-block;
+  margin-right:10px;
+}
+.tipos-item a {
+  /*padding:5;*/
+  background-color:orange;
+  padding:5px;
+  color:white;
+  font-weight:bold;
+  font-size:14px;
+  text-decoration:none;
+}
+.tipos-item a.active {
+  /*color:white;*/
+  background-color:darkorange;
+}
+.infowindow-media {
+  padding:8px;
+  border-radius:50%;
+}
+.infowindow-text {
+  /*font-size: 17.5px;*/
+  border-left: 5px solid #eee;
+  padding-left:2px;
+}
+.infowindow-opiniao-box {
+  display:none;
+}
+.infowindow-opiniao-button {
+
+}
+.glyphicon-star-empty {
+  color:#D1D1D1;
+}
+
+.glyphicon-star {
+  color:#E7711B
+}
+.ajaxmessage {
+  display:none;
+}
+
