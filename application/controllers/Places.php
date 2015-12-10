@@ -18,15 +18,13 @@ class Places extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
-	//$apikey = "AIzaSyAuTPAIhJmjiN7koIxMKQ3125yKwDzhCoo";
+	$apikey = "you-api-key";
+
 	public function entorno() {
 		$lat = $this->input->post('lat');
 		$lng = $this->input->post('lng');
 		$tipo = $this->input->post('tipo');
 		$next_page_token = $this->input->post('next_page_token');
-		// $apikey = "AIzaSyDnqM2w_h9H4L64Wyef91GUE__sG-sYCU0";
-		$apikey = "AIzaSyAuTPAIhJmjiN7koIxMKQ3125yKwDzhCoo";
-		//$apikey = "AIzaSyDFSJJsB2KacN1F2Fa1EvyO3RtbqDUhSPs";
 		if ($next_page_token==="") {
 			$url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=". $lat . "," . $lng
 				   . "&radius=1000&types=" . $tipo . "&key=". $apikey;
@@ -37,13 +35,9 @@ class Places extends CI_Controller {
 			$data['resultado'] = file_get_contents($url);
 			echo $data['resultado'];
 		}
-		//echo $url;
 	}
 	public function detalhes() {
 		$id = $this->input->post('placeid');
-		//$apikey = "AIzaSyDnqM2w_h9H4L64Wyef91GUE__sG-sYCU0";
-		//$apikey = "AIzaSyDFSJJsB2KacN1F2Fa1EvyO3RtbqDUhSPs";
-		$apikey = "AIzaSyAuTPAIhJmjiN7koIxMKQ3125yKwDzhCoo";		
 		$url = "https://maps.googleapis.com/maps/api/place/details/json?placeid=" . $id . "&key=". $apikey;
 		$data['resultado'] = file_get_contents($url);
 		echo $data['resultado'];	
@@ -51,9 +45,6 @@ class Places extends CI_Controller {
 	}
 	public function photos() {
 		$ref = $this->input->post('reference');
-		// $apikey = "AIzaSyDnqM2w_h9H4L64Wyef91GUE__sG-sYCU0";
-		//$apikey = "AIzaSyDFSJJsB2KacN1F2Fa1EvyO3RtbqDUhSPs";	
-		$apikey = "AIzaSyAuTPAIhJmjiN7koIxMKQ3125yKwDzhCoo";			
 		$url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400"
 				. "&photoreference=" . $ref . "&key=". $apikey;
 		$data['resultado'] = file_get_contents($url);
